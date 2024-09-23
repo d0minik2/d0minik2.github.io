@@ -1,0 +1,127 @@
+/* TODO
+- na mobilnych, tak jak na plakacie z wystawy wyglad
+
+
+*/
+
+
+
+body {
+    background-image: url(../assets/background.png);
+    background-attachment: fixed;
+    background-position: center top;
+
+    min-height: 100vh;
+}
+
+.fade-in {
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    visibility: hidden;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 100%; visibility: visible;}
+    to {opacity: 0; visibility: hidden;}
+}
+
+/* HEAD */
+
+
+.head {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 90px;
+    width: 70vw;
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* mix-blend-mode: difference; */
+}
+
+/* .card::before {
+    content: ' ';
+    position: fixed;
+    background-image: url(../assets/mask.png );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 30vw;
+    height: 100%;
+    padding-top: 10px;
+    opacity: 90%;
+} */
+
+.mask {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 30vw;
+    padding-top: 10px;
+    opacity: 90%;
+    
+}
+
+.titles {
+    position: relative;
+    bottom: 10px;
+    color: var(--primary);
+    z-index: -1;
+}
+
+.h1-title {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.h1-title::before {
+    content: ' ';
+    width: 12vw;
+    height: 0;
+    border: .1rem solid var(--primary);
+    margin: 3px;
+    display:inline-block;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+}
+
+.h2-title {
+    position: relative;
+
+}
+
+.fixed-scroll {
+    position: relative;
+    top:0;
+    mix-blend-mode: difference;
+}
+
+/* SOCIAL MEDIA BOX */
+.social-media {
+    padding-top: 7000px;
+}

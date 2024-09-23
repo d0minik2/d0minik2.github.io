@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-background: #0a1010;
+    --primary: #CCB493;
+    --secondary: #782D33;
+
+    --font-primary: "Bebas Neue", sans-serif;
+}
+
+body {
+    background-color: var(--main-background);
+}
+
+h1, h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+}
