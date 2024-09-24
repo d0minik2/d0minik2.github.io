@@ -67,12 +67,11 @@ function slide_in (elem, side) {
 
         let curr_opacity = elem.css("opacity")
         curr_opacity = parseFloat(curr_opacity)
-        if (curr_opacity < .2 ) {
+        if (curr_opacity < .35 ) {
             elem.css("opacity", "0")
-        } else if (curr_opacity >= .9) {
-            $(".social-media").css("pointer-events", "fill")
-        } else {
             $(".social-media").css("pointer-events", "none")
+        } else {
+            $(".social-media").css("pointer-events", "all")
         }
         requestAnimationFrame(slide_anim)
     }
@@ -145,21 +144,36 @@ $( document ).ready(function() {
         
         if (check_visivble($(".fill"))) {
             // after social media div
-            $(".head").css("position", "relative")
-            $(".head").css("top", window.pageYOffset + "px")
-            $(".fill").css("opacity")
-        } else {
-            $(".head").css("position", "fixed")
-            $(".head").css("top", "0")
-        }
+            // 
+            // $(".head").css("position", "relative")
+            // $(".head").css("top", offset - window.innerHeight + "px")
 
+
+            
+            // $(".head").css("z-index", "-1")
+
+            // let opacity =  Math.min(($(".fill")[0].getBoundingClientRect().top - window.pageYOffset + window.innerHeight) / window.innerHeight *-1)
+            // $(".fill").css("opacity", opacity)
+
+            // $(".head").css("filter", `blur(${opacity * 100}px)`)
+            // console.log(opacity)
+        }  else {
+            // $(".head").css("filter", `blur(${0}px)`)
+        }
+        
+        let opacity =  Math.min(($(".fill")[0].getBoundingClientRect().top - window.pageYOffset + window.innerHeight) / window.innerHeight *-1)
+        $(".fill").css("opacity", opacity)
+        // $(".head").css("filter", `blur(${opacity * 100}px)`)
+        console.log(opacity)
     });
 
+    // if not mobile TODO
     $(document).mousemove(function (mouse) {
         parallax_move("mask", mouse.pageX, mouse.pageY, 1.5)
     })
     
     smooth_scroll("fixed-scroll", .07)
+    smooth_scroll("fill", .07)
     // smooth_scroll("social-media", .07)
 
     // --- animate logo letters

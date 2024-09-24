@@ -4,6 +4,7 @@
 - rozpadajace sie literki? V
 - sociale wyjezdzaja ze srodka i sie chowaja
 - fix parralax
+- fix pointer events (.fill blocks)
 */
 
 
@@ -117,12 +118,10 @@ body {
 /* SOCIAL MEDIA BOX */
 .social-media {
     position: absolute;
-    width: 70vw;
-    top: 0;
+    width: 80vw;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    padding-top: 20vh;
-    margin-bottom: 200px; 
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     z-index: -1;
@@ -151,7 +150,7 @@ body {
 }
 
 .sm-item > h3 {
-    font-size: 10vh;
+    font-size: 100px;
     font-weight: 600;
     text-decoration: underline solid 3px;
     margin-bottom: -15px;
@@ -225,17 +224,30 @@ body {
 
 .fill {
     position: relative;
-    padding-top: 4000vh;
+    padding-top: 1000vh;
     background-color: black;
     /* visibility: hidden; */
+    mix-blend-mode: saturation;
 }
 
 
 @media only screen and (max-width: 768px) {
     .head {
-        margin-top: 270px;
+        position: absolute;
     }
-    .logo .logo-hidden {
-        padding-bottom: 300px;
+    .mask {
+        
+        top: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+        height: 70vw;
+    }
+    .titles {
+        top: 55vw;
+    }
+    .social-media {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -10%);
     }
 }
