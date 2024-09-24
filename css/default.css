@@ -24,7 +24,7 @@ h1, h2, h3 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3vw;
+    font-size: 55px;
 }
 
 ::-webkit-scrollbar {
@@ -105,7 +105,7 @@ h1, h2, h3 {
 .lang-btn {
     color: #CCB493;
     position: absolute;
-    right: 100px;
+    right: 8vh;
     text-align: right;
 
     top: 50%;

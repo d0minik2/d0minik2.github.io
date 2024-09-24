@@ -50,15 +50,6 @@ function slide_in (elem, side) {
     left = parseInt(left.substring(0, left.length - 2))
     right = parseInt(right.substring(0, right.length - 2))
     width = parseInt(width.substring(0, width.length - 2))
-    opacity = 0
-
-    if (window.pageYOffset < 200) {
-        elem.css("opacity", "0%")
-        $(".social-media").css("pointer-events", "none")
-    } else {
-        // elem.css("opacity", "100%")
-        $(".social-media").css("pointer-events", "fill")
-    }
 
     function slide_anim () {
         if (side == 0) {
@@ -66,7 +57,6 @@ function slide_in (elem, side) {
             left = Math.min(Math.max(left, 0), window.innerWidth/3)
             elem.css("left", left + "px")
             elem.css("opacity", 40/left)
-            console.log(width/left)
         } else {
             right -= (window.pageYOffset*2 - window.innerHeight) /50
             right = Math.min(Math.max(right, 0), window.innerWidth/3)
@@ -74,9 +64,21 @@ function slide_in (elem, side) {
             elem.css("opacity", 40/right )
 
         }
+
+        let curr_opacity = elem.css("opacity")
+        curr_opacity = parseFloat(curr_opacity)
+        if (curr_opacity < .2 ) {
+            elem.css("opacity", "0")
+        } else if (curr_opacity >= .9) {
+            $(".social-media").css("pointer-events", "fill")
+        } else {
+            $(".social-media").css("pointer-events", "none")
+        }
         requestAnimationFrame(slide_anim)
     }
     requestAnimationFrame(slide_anim)
+
+    
 }
 
 
@@ -96,7 +98,22 @@ function texture_flash () {
 
 
 $( document ).ready(function() {
-    
+    const anchors = [
+        {
+            id: "#",
+            name: "main"
+        },
+        {
+            id: "#social-media-anchor",
+            name: "main"
+        },
+        {
+            id: "#",
+            name: "main"
+        },
+    ]
+
+
     $(document).on('beforeunload', function(){
         $(window).scrollTop(0);
     });
@@ -124,7 +141,18 @@ $( document ).ready(function() {
         // } 
         slide_in($("#sm-cara"), 0)
         slide_in($("#sm-ig"), 1) 
-        slide_in($("#sm-rb"), 0)       
+        slide_in($("#sm-rb"), 0)   
+        
+        if (check_visivble($(".fill"))) {
+            // after social media div
+            $(".head").css("position", "relative")
+            $(".head").css("top", window.pageYOffset + "px")
+            $(".fill").css("opacity")
+        } else {
+            $(".head").css("position", "fixed")
+            $(".head").css("top", "0")
+        }
+
     });
 
     $(document).mousemove(function (mouse) {

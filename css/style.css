@@ -3,6 +3,7 @@
 - flashing textures przy przewijaniu
 - rozpadajace sie literki? V
 - sociale wyjezdzaja ze srodka i sie chowaja
+- fix parralax
 */
 
 
@@ -11,7 +12,7 @@ body {
     background-image: url(../assets/background.png);
     background-attachment: fixed;
     background-position: center top;
-    background-size: contain;
+    background-size: cover;
 
     min-height: 100vh;
 }
@@ -23,10 +24,15 @@ body {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-
-    margin-top: 90px;
     width: 70vw;
     z-index: 100;
+    margin-top: 10vh;
+}
+
+.head-container {
+    position: relative;
+    height: 300vh;
+    overflow: hidden;
 }
 
 .fixed-scroll {
@@ -34,6 +40,7 @@ body {
     overflow: visible;
     top: 0;
     mix-blend-mode: difference;    
+
 }
 
 .logo {
@@ -65,11 +72,11 @@ body {
 
 
 .mask {
-    position: fixed;
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    width: 30vw;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vw;
     overflow: hidden;
 }
 
@@ -77,7 +84,7 @@ body {
     position: relative;
     color: var(--primary);
     z-index: -1;
-    top: 10px;
+    top: 20px;
 }
 
 .h1-title {
@@ -123,24 +130,32 @@ body {
     pointer-events: none;
 }
 
+/* #social-media-anchor {
+    position: absolute;
+    visibility: hidden;
+    top: 200vh;
+} */
+
 .sm-link {
     position: relative;
     color: var(--secondary);
     text-decoration: none;
     opacity: 0%;
-    pointer-events: fill;
+    pointer-events: visibleFill;
 }
 
 .sm-item {
     display: inline-block;
     z-index: -1;
+    transition: .3s;
 }
 
 .sm-item > h3 {
-    font-size: 100px;
+    font-size: 10vh;
     font-weight: 600;
     text-decoration: underline solid 3px;
     margin-bottom: -15px;
+    
 }
 
 .sm-item > p {
@@ -154,9 +169,9 @@ body {
     left: 35%;
 }
 
-#sm-cara:hover {
-    transition: .3s;
-    transform: rotate(1deg);
+#sm-cara >.sm-item:hover {  
+    transform: rotate(1.5deg);
+    transform: scale(1.06);
 }
 
 #sm-ig {
@@ -165,9 +180,10 @@ body {
     right: 35%;
 }
 
-#sm-ig:hover {
+#sm-ig >.sm-item:hover {
     transition: .3s;
-    transform: rotate(-1deg);
+    transform: rotate(-1.5deg);
+    transform: scale(1.06);
 }
 
 #sm-ig > .sm-item > p {
@@ -179,9 +195,10 @@ body {
     left: 35%;
 }
 
-#sm-rb:hover {
+#sm-rb >.sm-item:hover {
     transition: .3s;
-    transform: rotate(1deg);
+    transform: rotate(1.5deg);
+    transform: scale(1.06);
 }
 
 .slide-right {
@@ -207,7 +224,18 @@ body {
 }
 
 .fill {
-    padding-top: 400vh;
+    position: relative;
+    padding-top: 4000vh;
     background-color: black;
-    visibility: hidden;
+    /* visibility: hidden; */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .head {
+        margin-top: 270px;
+    }
+    .logo .logo-hidden {
+        padding-bottom: 300px;
+    }
 }
