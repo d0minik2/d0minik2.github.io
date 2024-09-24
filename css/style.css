@@ -77,6 +77,11 @@ body {
     mix-blend-mode: difference;
 }
 
+.logo > * {
+    position: absolute;
+    width: 100%;
+}
+
 .logo-hidden {
     position: relative;
     width: 100%;
@@ -92,6 +97,7 @@ body {
     transform: translateX(-50%);
     top: 0;
     width: 30vw;
+    overflow: hidden;
 }
 
 .titles {
