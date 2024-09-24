@@ -38,7 +38,8 @@ body {
 
 .logo {
     position: absolute;
-    width: 100%;    
+    width: 100%;
+    top:50px;    
     left: 50%;
     transform: translateX(-50%);
     overflow: visible;
@@ -54,6 +55,7 @@ body {
 }
 
 .logo-hidden {
+    top:50px; 
     position: relative;
     width: 100%;
     left: 50%;
@@ -73,9 +75,9 @@ body {
 
 .titles {
     position: relative;
-    bottom: 10px;
     color: var(--primary);
     z-index: -1;
+    top: 10px;
 }
 
 .h1-title {
@@ -126,7 +128,7 @@ body {
     color: var(--secondary);
     text-decoration: none;
     opacity: 0%;
-    
+    pointer-events: fill;
 }
 
 .sm-item {
@@ -135,7 +137,8 @@ body {
 }
 
 .sm-item > h3 {
-    font-size: 90px;
+    font-size: 100px;
+    font-weight: 600;
     text-decoration: underline solid 3px;
     margin-bottom: -15px;
 }
@@ -151,10 +154,20 @@ body {
     left: 35%;
 }
 
+#sm-cara:hover {
+    transition: .3s;
+    transform: rotate(1deg);
+}
+
 #sm-ig {
     top: 0;
     text-align: right;
     right: 35%;
+}
+
+#sm-ig:hover {
+    transition: .3s;
+    transform: rotate(-1deg);
 }
 
 #sm-ig > .sm-item > p {
@@ -164,6 +177,11 @@ body {
 #sm-rb {
     top: 0;
     left: 35%;
+}
+
+#sm-rb:hover {
+    transition: .3s;
+    transform: rotate(1deg);
 }
 
 .slide-right {

@@ -56,22 +56,22 @@ function slide_in (elem, side) {
         elem.css("opacity", "0%")
         $(".social-media").css("pointer-events", "none")
     } else {
-        elem.css("opacity", "100%")
-        $(".social-media").css("pointer-events", "all")
+        // elem.css("opacity", "100%")
+        $(".social-media").css("pointer-events", "fill")
     }
 
     function slide_anim () {
         if (side == 0) {
-            left -= (window.pageYOffset - window.innerHeight) /50
+            left -= (window.pageYOffset*2 - window.innerHeight) /50
             left = Math.min(Math.max(left, 0), window.innerWidth/3)
             elem.css("left", left + "px")
-            elem.css("opacity", 20/left)
+            elem.css("opacity", 40/left)
             console.log(width/left)
         } else {
-            right -= (window.pageYOffset - window.innerHeight) /50
+            right -= (window.pageYOffset*2 - window.innerHeight) /50
             right = Math.min(Math.max(right, 0), window.innerWidth/3)
             elem.css("right", right +"px")
-            elem.css("opacity", 10/right)
+            elem.css("opacity", 40/right )
 
         }
         requestAnimationFrame(slide_anim)
@@ -106,25 +106,22 @@ $( document ).ready(function() {
     // ANIMATIONS
       
     $(document).on('scroll', function() {
-        var scroll_top = $(window).scrollTop()
-
-        if (scroll_top < 1200) {
-            // fix mask position, release when scrolled
-            // $(".mask").css("top", `${scroll_top}px`)
-
-            // if (scroll_top>850) {
-            //     let blur = Math.max(Math.min((scroll_top - 850)/5, 200), 0)
-            //     $(".mask").css("filter", `blur(${blur}px)`)
-            //     $(".mask").css("transform", `scale(1, ${1 - blur / 200})`)
-            //     $(".mask").css("left", `50%`)
-            //     $(".mask").css("transform", `translateX(-50%))`)
-            // } else {
-            //     $(".mask").css("filter", `blur(0px)`)
-            //     $(".mask").css("transform", `scale(1, 1)`)
-            //     $(".mask").css("left", `50%`)
-            //     $(".mask").css("transform", `translateX(-50%))`)
-            // }
-        } 
+        // texture_flash()
+        // var scroll_top = $(window).scrollTop()
+        // if (scroll_top < 1200) {
+        //     if (scroll_top>850) {
+        //         let blur = Math.max(Math.min((scroll_top - 850)/5, 200), 0)
+        //         $(".mask").css("filter", `blur(${blur}px)`)
+        //         $(".mask").css("transform", `scale(1, ${1 - blur / 200})`)
+        //         $(".mask").css("left", `50%`)
+        //         $(".mask").css("transform", `translateX(-50%))`)
+        //     } else {
+        //         $(".mask").css("filter", `blur(0px)`)
+        //         $(".mask").css("transform", `scale(1, 1)`)
+        //         $(".mask").css("left", `50%`)
+        //         $(".mask").css("transform", `translateX(-50%))`)
+        //     }
+        // } 
         slide_in($("#sm-cara"), 0)
         slide_in($("#sm-ig"), 1) 
         slide_in($("#sm-rb"), 0)       
@@ -138,22 +135,18 @@ $( document ).ready(function() {
     // smooth_scroll("social-media", .07)
 
     // --- animate logo letters
-    rotate_scroll("logo-letter-1", 1)
     smooth_scroll("logo-letter-1", .03)
 
-    rotate_scroll("logo-letter-2", -.4)
     smooth_scroll("logo-letter-2", .05)
 
     rotate_scroll("logo-letter-3", -.1)
 
-    rotate_scroll("logo-letter-4", -.05)
     smooth_scroll("logo-letter-4", .05)
 
-    rotate_scroll("logo-letter-5", .2)
+    rotate_scroll("logo-letter-5", .08)
 
-    rotate_scroll("logo-letter-6", .1)
-    smooth_scroll("logo-letter-6", .02)
+    smooth_scroll("logo-letter-6", .03)
 
-    rotate_scroll("logo-letter-7", -.3)
+    rotate_scroll("logo-letter-7", -.2)
 
 });

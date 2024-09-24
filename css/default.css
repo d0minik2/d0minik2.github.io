@@ -51,7 +51,7 @@ h1, h2, h3 {
     top: -20vh;
     width: 100vw;
     height: 120vh;
-    z-index: 1000;
+    z-index: 10000;
     visibility: hidden;
     animation-name: fade-in;
     animation-duration: 2s;
@@ -73,7 +73,7 @@ h1, h2, h3 {
     width: 100vw;
     height: 120vh;
     background-image: url(../assets/texture1.jpg);
-    z-index: 100;
+    z-index: 10000;
     opacity: .5;
     visibility: hidden;
     mix-blend-mode: multiply;
@@ -83,16 +83,51 @@ h1, h2, h3 {
     animation-timing-function: ease-out;
 }
 
-/* .slide-in {
-    visibility: visible;
-    animation-name: slide-in;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    opacity: 100%;
+.nav {
+    position: fixed;
+    z-index: 10000;
+    padding: 30px;
+    font-size: 17px;
 }
 
-@keyframes slide-in {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-} */
+.topbar {
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+}
+
+.icon {
+    position: absolute;
+    color: var(--secondary);
+    height: inherit;
+}
+
+.lang-btn {
+    color: #CCB493;
+    position: absolute;
+    right: 100px;
+    text-align: right;
+
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lang-btn:hover {
+    text-decoration: line-through;
+}
+
+.left-sidebar {
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    padding: 40px;
+}
+
+.left-sidebar > p {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--primary);
+    bottom: 110px;
+}
