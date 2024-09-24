@@ -1,7 +1,7 @@
 /* TODO
 - na mobilnych, tak jak na plakacie z wystawy wyglad
-
-
+- flashing textures przy przewijaniu
+- rozpadajace sie literki?
 */
 
 
@@ -15,14 +15,16 @@ body {
 }
 
 .fade-in {
+    pointer-events: none;
     position: fixed;
     background-color: black;
+    top: -20vh;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     z-index: 100;
     visibility: hidden;
     animation-name: fade-in;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
 
@@ -34,11 +36,31 @@ body {
     to {opacity: 0; visibility: hidden;}
 }
 
+.texture1 {
+    pointer-events: none;
+    position: fixed;
+    top: -20vh;
+    width: 100vw;
+    height: 120vh;
+    background-image: url(../assets/texture1.jpg);
+    z-index: 100;
+    opacity: .5;
+    visibility: hidden;
+    mix-blend-mode: multiply;
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+
+
+
 /* HEAD */
 
 
 .head {
-    position: fixed;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
 
@@ -47,40 +69,29 @@ body {
 }
 
 .logo {
+    position: absolute;
+    width: 100%;    
+    left: 50%;
+    transform: translateX(-50%);
+    
+    mix-blend-mode: difference;
+}
+
+.logo-hidden {
     position: relative;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    /* mix-blend-mode: difference; */
+    visibility: hidden;
 }
 
-/* .card::before {
-    content: ' ';
-    position: fixed;
-    background-image: url(../assets/mask.png );
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 30vw;
-    height: 100%;
-    padding-top: 10px;
-    opacity: 90%;
-} */
 
 .mask {
     position: fixed;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translateX(-50%);
+    top: 0;
     width: 30vw;
-    padding-top: 10px;
-    opacity: 90%;
-    
 }
 
 .titles {
@@ -117,11 +128,55 @@ body {
 
 .fixed-scroll {
     position: relative;
+    overflow: hidden;
     top:0;
-    mix-blend-mode: difference;
+    mix-blend-mode: difference;    
 }
+
+
+
+
 
 /* SOCIAL MEDIA BOX */
 .social-media {
-    padding-top: 7000px;
+    position: relative;
+    width: 70vw;
+    margin: 0 auto;
+    padding-top: 50vh;
+    margin-bottom: 200px;
+    
+}
+
+.sm-link {
+    position: relative;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.sm-link > h3 {
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+.sm-link > p {
+    color: var(--primary);
+    text-align: right;
+    
+}
+
+#sm-ig {
+    top: 0;
+}
+
+#sm-cara {
+    top: 0;
+}
+
+#sm-rb {
+    top: 0;
+}
+
+.fill {
+    padding-top: 400vh;
+    background-color: black;
 }
