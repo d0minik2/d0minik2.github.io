@@ -14,48 +14,6 @@ body {
     min-height: 100vh;
 }
 
-.fade-in {
-    pointer-events: none;
-    position: fixed;
-    background-color: black;
-    top: -20vh;
-    width: 100vw;
-    height: 120vh;
-    z-index: 100;
-    visibility: hidden;
-    animation-name: fade-in;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-
-    opacity: 0;
-}
-
-@keyframes fade-in {
-    from {opacity: 100%; visibility: visible;}
-    to {opacity: 0; visibility: hidden;}
-}
-
-.texture1 {
-    pointer-events: none;
-    position: fixed;
-    top: -20vh;
-    width: 100vw;
-    height: 120vh;
-    background-image: url(../assets/texture1.jpg);
-    z-index: 100;
-    opacity: .5;
-    visibility: hidden;
-    mix-blend-mode: multiply;
-    animation-name: fade-in;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-}
-
-
-
-
 /* HEAD */
 
 

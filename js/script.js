@@ -19,7 +19,6 @@ function rotate_scroll (class_name, speed) {
     function scroll_r() {
         
         let angle = (window.pageYOffset/10) * speed
-        console.log(angle)
         elem.css("transform", `rotate(${angle}deg)`)
 
         callScroll = requestAnimationFrame(scroll_r)
@@ -41,14 +40,23 @@ function texture_flash () {
 }
 
 
-$(window).on('beforeunload', function(){
-    $(window).scrollTop(0);
-});
+function parallax_move (class_name, x, y, speed) {
+    const elem = $(`.${class_name}`) 
+    let mx = (window.innerWidth - x * speed)/100*-1
+    let my = (window.innerHeight - y * speed)/100 *-1
+
+    elem.css("margin-left", `${mx}px`)
+    elem.css("margin-top", `${my}px`)
+}
 
 
 
 $( document ).ready(function() {
-    $(window).on('scroll', function() {
+    $(document).on('beforeunload', function(){
+        $(window).scrollTop(0);
+    });
+
+    $(document).on('scroll', function() {
         var scroll_top = $(window).scrollTop()
 
         if (scroll_top < 1200) {
@@ -59,6 +67,14 @@ $( document ).ready(function() {
 
         } 
     });
+
+    $(document).mousemove(function (mouse) {
+        let x = mouse.pageX
+        let y = mouse.pageY
+        console.log(x + " " + y)
+        parallax_move("mask", x, y, 1.5)
+    })
+    
     
 
     // ANIMATIONS
