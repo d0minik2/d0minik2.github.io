@@ -11,6 +11,7 @@ function smooth_scroll (class_name, speed) {
     function scroll_s() {
         pos += Math.round((window.pageYOffset - pos) * speed)
 
+        pos = Math.min(pos, window.innerHeight)
         elem.css("transform", `translateY(-${pos}px) translateZ(0)`)
 
         callScroll = requestAnimationFrame(scroll_s)
@@ -157,6 +158,7 @@ $( document ).ready(function() {
 
             // $(".head").css("filter", `blur(${opacity * 100}px)`)
             // console.log(opacity)
+            load_content()
         }  else {
             // $(".head").css("filter", `blur(${0}px)`)
         }
@@ -164,7 +166,6 @@ $( document ).ready(function() {
         let opacity =  Math.min(($(".fill")[0].getBoundingClientRect().top - window.pageYOffset + window.innerHeight) / window.innerHeight *-1)
         $(".fill").css("opacity", opacity)
         // $(".head").css("filter", `blur(${opacity * 100}px)`)
-        console.log(opacity)
     });
 
     // if not mobile TODO
