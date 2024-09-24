@@ -73,13 +73,14 @@ body {
     width: 100%;    
     left: 50%;
     transform: translateX(-50%);
-    
+    overflow: visible;
     mix-blend-mode: difference;
 }
 
 .logo > * {
     position: absolute;
     width: 100%;
+    overflow: visible;
 }
 
 .logo-hidden {
@@ -134,7 +135,7 @@ body {
 
 .fixed-scroll {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     top:0;
     mix-blend-mode: difference;    
 }
