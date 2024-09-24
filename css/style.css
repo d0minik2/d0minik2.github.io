@@ -1,7 +1,8 @@
 /* TODO
 - na mobilnych, tak jak na plakacie z wystawy wyglad
 - flashing textures przy przewijaniu
-- rozpadajace sie literki?
+- rozpadajace sie literki? V
+- sociale wyjezdzaja ze srodka i sie chowaja
 */
 
 
@@ -10,6 +11,7 @@ body {
     background-image: url(../assets/background.png);
     background-attachment: fixed;
     background-position: center top;
+    background-size: contain;
 
     min-height: 100vh;
 }
@@ -18,12 +20,20 @@ body {
 
 
 .head {
-    position: relative;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
 
     margin-top: 90px;
     width: 70vw;
+    z-index: 100;
+}
+
+.fixed-scroll {
+    position: relative;
+    overflow: visible;
+    top: 0;
+    mix-blend-mode: difference;    
 }
 
 .logo {
@@ -33,12 +43,14 @@ body {
     transform: translateX(-50%);
     overflow: visible;
     mix-blend-mode: difference;
+    
 }
 
 .logo > * {
     position: absolute;
     width: 100%;
     overflow: visible;
+
 }
 
 .logo-hidden {
@@ -91,57 +103,93 @@ body {
 
 }
 
-.fixed-scroll {
-    position: relative;
-    overflow: visible;
-    top:0;
-    mix-blend-mode: difference;    
-}
-
-
-
 
 
 /* SOCIAL MEDIA BOX */
 .social-media {
-    position: relative;
+    position: absolute;
     width: 70vw;
-    margin: 0 auto;
-    padding-top: 50vh;
-    margin-bottom: 200px;
-    
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20vh;
+    margin-bottom: 200px; 
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    gap: 70px;
+    pointer-events: none;
 }
 
 .sm-link {
     position: relative;
     color: var(--secondary);
     text-decoration: none;
-}
-
-.sm-link > h3 {
-    font-size: 80px;
-    text-decoration: underline;
-}
-
-.sm-link > p {
-    color: var(--primary);
-    text-align: right;
+    opacity: 0%;
     
 }
 
-#sm-ig {
-    top: 0;
+.sm-item {
+    display: inline-block;
+    z-index: -1;
+}
+
+.sm-item > h3 {
+    font-size: 90px;
+    text-decoration: underline solid 3px;
+    margin-bottom: -15px;
+}
+
+.sm-item > p {
+    color: var(--primary);
+    text-align: left;
+    
 }
 
 #sm-cara {
     top: 0;
+    left: 35%;
+}
+
+#sm-ig {
+    top: 0;
+    text-align: right;
+    right: 35%;
+}
+
+#sm-ig > .sm-item > p {
+    text-align: right;
 }
 
 #sm-rb {
     top: 0;
+    left: 35%;
+}
+
+.slide-right {
+    right: 0;
+    opacity: 100%;
+    animation: slide-right 1s ease 0 1;
+}
+
+@keyframes slide-right {
+    from {right: 45%; opacity: 0%;}
+    to {right: 0%; opacity: 100%;}
+}
+
+.slide-left {
+    left: 0;
+    opacity: 100%;
+    animation: slide-left 1s ease 0 1;
+}
+
+@keyframes slide-left {
+    from {left: 45%; opacity: 0%;}
+    to {left: 0%; opacity: 100%;}
 }
 
 .fill {
     padding-top: 400vh;
     background-color: black;
+    visibility: hidden;
 }
