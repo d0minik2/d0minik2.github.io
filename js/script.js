@@ -120,39 +120,17 @@ $( document ).ready(function() {
         },
     ]
 
-
     $(document).on('beforeunload', function(){
         $(window).scrollTop(0);
     });
 
 
-
-    // ANIMATIONS
-      
-    $(document).on('scroll', function() {
-        // texture_flash()
-        // var scroll_top = $(window).scrollTop()
-        // if (scroll_top < 1200) {
-        //     if (scroll_top>850) {
-        //         let blur = Math.max(Math.min((scroll_top - 850)/5, 200), 0)
-        //         $(".mask").css("filter", `blur(${blur}px)`)
-        //         $(".mask").css("transform", `scale(1, ${1 - blur / 200})`)
-        //         $(".mask").css("left", `50%`)
-        //         $(".mask").css("transform", `translateX(-50%))`)
-        //     } else {
-        //         $(".mask").css("filter", `blur(0px)`)
-        //         $(".mask").css("transform", `scale(1, 1)`)
-        //         $(".mask").css("left", `50%`)
-        //         $(".mask").css("transform", `translateX(-50%))`)
-        //     }
-        // } 
-         
-        
+    $(document).on('scroll', function() {       
         if (check_visivble($(".fill"))) {
             // after social media div
-            // 
-            // $(".head").css("position", "relative")
-            // $(".head").css("top", offset - window.innerHeight + "px")
+            
+            $(".head").css("position", "relative")
+            $(".head").css("top", window.pageYOffset + "px")
 
 
             
@@ -163,8 +141,10 @@ $( document ).ready(function() {
 
             // $(".head").css("filter", `blur(${opacity * 100}px)`)
             // console.log(opacity)
-            load_content()
+            
         }  else {
+            $(".head").css("position", "fixed")
+            $(".head").css("top", 0 + "px")
             // $(".head").css("filter", `blur(${0}px)`)
         }
         
@@ -175,8 +155,11 @@ $( document ).ready(function() {
 
     // if not mobile TODO
     $(document).mousemove(function (mouse) {
-        parallax_move("mask", mouse.pageX, mouse.pageY, 1.5)
+        // parallax_move("mask", mouse.pageX, mouse.pageY, 1.5)
     })
+
+
+    // --- ANIMATIONS
     
     smooth_scroll("fixed-scroll", .07)
     smooth_scroll("fill", .07)
@@ -200,5 +183,4 @@ $( document ).ready(function() {
     smooth_scroll("logo-letter-6", .03)
 
     rotate_scroll("logo-letter-7", -.2)
-
 });
