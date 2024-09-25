@@ -129,13 +129,18 @@ body {
     pointer-events: none;
 }
 
-/* #social-media-anchor {
+#social-media-anchor {
     position: absolute;
     visibility: hidden;
-    top: 200vh;
-} */
+    background-color: red;
+    width: 200px;
+    height: 10px;
+    top: 170vh;
+    z-index: 1000;
+}
 
 .sm-link {
+    transition: .3s;
     position: relative;
     color: var(--secondary);
     text-decoration: none;

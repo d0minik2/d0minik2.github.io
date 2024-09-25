@@ -4,6 +4,7 @@ function check_visivble(elm) {
     return !(rect.bottom < 0 || rect.top - view_height >= 0);
   }
 
+  
 function smooth_scroll (class_name, speed) {
     const elem = $(`.${class_name}`)
     let pos = 0
@@ -43,7 +44,7 @@ function parallax_move (class_name, x, y, speed) {
 }
 
 
-function slide_in (elem, side) {
+function sm_slide (elem, side) {
     let left = elem.css("left")
     let right = elem.css("right")
     let width = $(".social-media").css("width")
@@ -53,30 +54,36 @@ function slide_in (elem, side) {
     width = parseInt(width.substring(0, width.length - 2))
 
     function slide_anim () {
-        if (side == 0) {
-            left -= (window.pageYOffset*2 - window.innerHeight) /50
-            left = Math.min(Math.max(left, 0), window.innerWidth/3)
-            elem.css("left", left + "px")
-            elem.css("opacity", 40/left)
-        } else {
-            right -= (window.pageYOffset*2 - window.innerHeight) /50
-            right = Math.min(Math.max(right, 0), window.innerWidth/3)
-            elem.css("right", right +"px")
-            elem.css("opacity", 40/right )
+        let prct_show = (window.pageYOffset - ($("#social-media-anchor").position().top - window.innerHeight))/window.innerHeight
+        prct_show *= 2
 
+        if (prct_show > 1) {
+            // fade out 
+            prct_show = 2 - prct_show
         }
+        let opacity = (prct_show - .3) *2
+
+        if (side == 0) {
+            let l = Math.max(left - (prct_show*left), 0)
+            elem.css("left", l + "px")
+        } else {
+            let r = Math.max(right - (prct_show*right), 0)
+            elem.css("right", r + "px")
+        }
+
+        elem.css("opacity", opacity)
 
         let curr_opacity = elem.css("opacity")
         curr_opacity = parseFloat(curr_opacity)
-        if (curr_opacity < .35 ) {
-            elem.css("opacity", "0")
-            $(".social-media").css("pointer-events", "none")
-        } else {
+        if (check_visivble($("#social-media-anchor"))) {
             $(".social-media").css("pointer-events", "all")
+            
+        } else {
+            $(".social-media").css("pointer-events", "none")
         }
         requestAnimationFrame(slide_anim)
     }
-    requestAnimationFrame(slide_anim)
+    slide_anim()
 
     
 }
@@ -139,9 +146,7 @@ $( document ).ready(function() {
         //         $(".mask").css("transform", `translateX(-50%))`)
         //     }
         // } 
-        slide_in($("#sm-cara"), 0)
-        slide_in($("#sm-ig"), 1) 
-        slide_in($("#sm-rb"), 0)   
+         
         
         if (check_visivble($(".fill"))) {
             // after social media div
@@ -176,6 +181,10 @@ $( document ).ready(function() {
     smooth_scroll("fixed-scroll", .07)
     smooth_scroll("fill", .07)
     // smooth_scroll("social-media", .07)
+
+    sm_slide($("#sm-cara"), 0)
+    sm_slide($("#sm-ig"), 1) 
+    sm_slide($("#sm-rb"), 0)  
 
     // --- animate logo letters
     smooth_scroll("logo-letter-1", .03)
