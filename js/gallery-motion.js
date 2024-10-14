@@ -15,7 +15,7 @@ $(document).ready(function () {
             },
             600: {
                 perView: 1,
-                peek: { before: 80, after: 80 }
+                // peek: { before: 10, after: 10 }
             }
         }
     })
@@ -44,6 +44,7 @@ $(document).ready(function () {
         prct_show = Math.min(Math.max(0, prct_show * 2 / 3), .6)
         gallery_overlay.css("opacity", prct_show)
         console.log(prct_show)
+        // MOVE ON SCROLL
         // if (check_visivble(gallery_container)) {
         //     glide.index += 1
         //     glide.update()

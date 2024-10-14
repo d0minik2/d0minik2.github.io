@@ -27,9 +27,6 @@ h3 {
     font-weight: 400;
     font-style: normal;
     font-size: 55px;
-    -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
-    -webkit-mask-size: 944px 604px;
-    mix-blend-mode: multiply;
 }
 
 ::-webkit-scrollbar {
@@ -100,6 +97,7 @@ h3 {
     z-index: 10000;
     padding: 30px;
     font-size: 17px;
+    /* filter: brightness(2); */
 }
 
 .topbar {
