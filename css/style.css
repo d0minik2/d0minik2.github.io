@@ -4,7 +4,7 @@
 - rozpadajace sie literki? V
 - sociale wyjezdzaja ze srodka i sie chowaja
 - fix parralax
-- fix pointer events (.fill blocks)
+- fix pointer events (.gallery-container blocks)
 */
 
 
@@ -17,6 +17,18 @@ body {
 
     min-height: 100vh;
 }
+
+/* body::before {
+    content: " ";
+    background-image: url(../assets/texture2.jpg);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 40%;
+} */
 
 /* HEAD */
 
@@ -32,7 +44,7 @@ body {
 
 .head-container {
     position: relative;
-    height: 600vh;
+    height: 300vh;
     overflow: hidden;
 }
 
@@ -40,22 +52,22 @@ body {
     position: relative;
     overflow: visible;
     top: 0;
-    mix-blend-mode: difference;    
+    mix-blend-mode: difference;
 
 }
 
 .logo {
     position: absolute;
     width: 100%;
-    top:50px;    
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     overflow: visible;
     mix-blend-mode: difference;
-    
+
 }
 
-.logo > * {
+.logo>* {
     position: absolute;
     width: 100%;
     overflow: visible;
@@ -63,7 +75,7 @@ body {
 }
 
 .logo-hidden {
-    top:50px; 
+    top: 50px;
     position: relative;
     width: 100%;
     left: 50%;
@@ -77,8 +89,9 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 50vw;
-    overflow: hidden;
+    height: 52vw;
+    overflow: visible;
+    transition: .3s;
 }
 
 .titles {
@@ -93,7 +106,7 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    
+
 }
 
 .h1-title::before {
@@ -102,7 +115,7 @@ body {
     height: 0;
     border: .1rem solid var(--primary);
     margin: 3px;
-    display:inline-block;
+    display: inline-block;
     margin-bottom: 1rem;
     margin-right: 1rem;
 
@@ -136,36 +149,36 @@ body {
     width: 200px;
     height: 10px;
     top: 160vh;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .sm-link {
-    transition: .1s;
     position: relative;
     color: var(--secondary);
     text-decoration: none;
     opacity: 0%;
     pointer-events: visibleFill;
+    transition: 1s;
 }
 
 .sm-item {
     display: inline-block;
-    z-index: -1;
+    z-index: 1;
     transition: .3s;
 }
 
-.sm-item > h3 {
+.sm-item>h3 {
     font-size: 100px;
     font-weight: 600;
     text-decoration: underline solid 3px;
     margin-bottom: -15px;
-    
+
 }
 
-.sm-item > p {
+.sm-item>p {
     color: var(--primary);
     text-align: left;
-    
+
 }
 
 #sm-cara {
@@ -173,7 +186,7 @@ body {
     left: 35%;
 }
 
-#sm-cara >.sm-item:hover {  
+#sm-cara>.sm-item:hover {
     transform: rotate(1.5deg);
     transform: scale(1.06);
 }
@@ -184,13 +197,13 @@ body {
     right: 35%;
 }
 
-#sm-ig >.sm-item:hover {
+#sm-ig>.sm-item:hover {
     transition: .3s;
     transform: rotate(-1.5deg);
     transform: scale(1.06);
 }
 
-#sm-ig > .sm-item > p {
+#sm-ig>.sm-item>p {
     text-align: right;
 }
 
@@ -199,40 +212,125 @@ body {
     left: 35%;
 }
 
-#sm-rb >.sm-item:hover {
+#sm-rb>.sm-item:hover {
     transition: .3s;
     transform: rotate(1.5deg);
     transform: scale(1.06);
 }
 
-.slide-right {
+.moth {
+    position: absolute;
+    opacity: 8%;
+    z-index: -2;
+    width: 80vw;
+
     right: 0;
-    opacity: 100%;
-    animation: slide-right 1s ease 0 1;
+    top: 90vh;
+    mix-blend-mode: exclusion;
 }
 
-@keyframes slide-right {
-    from {right: 45%; opacity: 0%;}
-    to {right: 0%; opacity: 100%;}
-}
 
-.slide-left {
-    left: 0;
-    opacity: 100%;
-    animation: slide-left 1s ease 0 1;
-}
-
-@keyframes slide-left {
-    from {left: 45%; opacity: 0%;}
-    to {left: 0%; opacity: 100%;}
-}
-
-.fill {
+.gallery-container {
     position: relative;
-    padding-top: 1000vh;
-    background-color: black;
-    /* visibility: hidden; */
-    /* mix-blend-mode: saturation; */
+    width: 100vw;
+    overflow: visible;
+    z-index: 101;
+    transition: .3s;
+    padding-bottom: 100px;
+}
+
+
+.gallery-title {
+    color: transparent;
+    display: block;
+    text-align: center;
+    font-size: 520px;
+    left: 25%;
+    mix-blend-mode: difference;
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: var(--primary);
+    margin-bottom: 100px;
+
+}
+
+
+.gallery {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .3s;
+
+}
+
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../artworks/04.png");
+    z-index: 0;
+    filter: blur(20px);
+    opacity: 0;
+    transition: .3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-container:active {
+    cursor: grabbing;
+}
+
+.artwork {
+    transform-origin: center;
+    transform: scale(.8);
+    /* opacity: .6; */
+    transition: .3s;
+    filter: brightness(.5) saturate(.7);
+}
+
+.artwork>img {
+    position: relative;
+    height: 70vh;
+    border-radius: 7px;
+}
+
+.artwork>.artwork-title {
+    color: var(--primary);
+    visibility: hidden;
+}
+
+.artwork>.artwork-technique {
+    color: var(--primary);
+    visibility: hidden;
+}
+
+.artwork>.artwork-size {
+    color: var(--primary);
+    visibility: hidden;
+}
+
+.artwork[class*="active"] {
+    transform: scale(1);
+    opacity: 1;
+    filter: brightness(1) saturate(1);
+}
+
+.artwork[class*="active"]>.artwork-title {
+    visibility: visible;
+}
+
+.artwork[class*="active"]>p {
+    visibility: visible;
+}
+
+.artwork[class*="active"]>img {
+    box-shadow: 0px 0px 31px 1px rgba(0, 0, 0, 1);
 }
 
 

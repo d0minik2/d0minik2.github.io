@@ -3,7 +3,7 @@
     padding: 0;
 
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    
+    list-style: none;
 }
 
 :root {
@@ -20,16 +20,21 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 55px;
+    -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+    -webkit-mask-size: 944px 604px;
+    mix-blend-mode: multiply;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
 ::-webkit-scrollbar-track {
     background: var(--main-background);
@@ -62,8 +67,15 @@ h1, h2, h3 {
 }
 
 @keyframes fade-in {
-    from {opacity: 100%; visibility: visible;}
-    to {opacity: 0; visibility: hidden;}
+    from {
+        opacity: 100%;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .texture1 {
@@ -124,7 +136,7 @@ h1, h2, h3 {
     padding: 40px;
 }
 
-.left-sidebar > p {
+.left-sidebar>p {
     position: absolute;
     writing-mode: vertical-rl;
     text-orientation: upright;
