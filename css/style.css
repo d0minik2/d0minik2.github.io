@@ -232,11 +232,11 @@ body {
 
 .gallery-container {
     position: relative;
-    width: 100vw;
-    overflow: visible;
+    overflow-x: hidden;
     z-index: 101;
     transition: .3s;
     padding-bottom: 100px;
+    width: 100vw;
 }
 
 
@@ -258,20 +258,20 @@ body {
     position: relative;
     left: 0;
     display: flex;
-    width: 100vw;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
+    /* gap: 40px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: space-between;
     z-index: 2;
     transition: .3s;
-
+    width: 100vw;
 }
 
 .gallery-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-image: url("../artworks/04.png");
     z-index: 0;
@@ -289,9 +289,11 @@ body {
 .artwork {
     transform-origin: center;
     transform: scale(.8);
-    /* opacity: .6; */
+    opacity: .6;
     transition: .3s;
     filter: brightness(.5) saturate(.7);
+    z-index: 0;
+    width: min-content;
 }
 
 .artwork>img {
@@ -305,12 +307,12 @@ body {
     visibility: hidden;
 }
 
-.artwork>.artwork-technique {
+.artwork .artwork-technique {
     color: var(--primary);
     visibility: hidden;
 }
 
-.artwork>.artwork-size {
+.artwork .artwork-size {
     color: var(--primary);
     visibility: hidden;
 }
@@ -319,17 +321,18 @@ body {
     transform: scale(1);
     opacity: 1;
     filter: brightness(1) saturate(1);
+    z-index: 1;
 }
 
-.artwork[class*="active"]>.artwork-title {
+.artwork[class*="active"] .artwork-title {
     visibility: visible;
 }
 
-.artwork[class*="active"]>p {
+.artwork[class*="active"] p {
     visibility: visible;
 }
 
-.artwork[class*="active"]>img {
+.artwork[class*="active"] img {
     box-shadow: 0px 0px 31px 1px rgba(0, 0, 0, 1);
 }
 

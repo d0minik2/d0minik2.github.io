@@ -60,17 +60,17 @@ function sm_slide(elem, side) {
         let prct_show = (window.pageYOffset - ($("#social-media-anchor").position().top - window.innerHeight)) / window.innerHeight
         prct_show *= 2
 
-        if (prct_show > 1.5) {
+        if (prct_show > 2) {
             // fade out 
-            prct_show = 2.5 - prct_show
+            prct_show = 3 - prct_show
         }
         let opacity = (prct_show - .3) * 2
 
         if (side == 0) {
-            let l = Math.max((left - (prct_show * left)), 0)
+            let l = Math.min(Math.max((left - (prct_show * left)) * 3, 0), window.innerWidth * .3)
             elem.css("left", l + "px")
         } else {
-            let r = Math.max(right - (prct_show * right), 0)
+            let r = Math.min(Math.max((right - (prct_show * right)) * 3, 0), window.innerWidth * .3)
             elem.css("right", r + "px")
         }
 
