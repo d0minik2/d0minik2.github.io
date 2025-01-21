@@ -1,0 +1,90 @@
+$.fn.is_in_viewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$.fn.overflow_fix = function () {
+    if ($(this).is_in_viewport()) {
+        $(this).css("overflow", "initial")
+    } else {
+        $(this).css("overflow", "hidden")
+    }
+}
+
+$.fn.apply_transform = function (type, value, keep_inital = false) {
+    if ($(this).data("transforms") == undefined) {
+        $(this).data("transforms", {})
+
+        if (keep_inital) {
+            let idx = $(this).css("transform").indexOf("(")
+            $(this).data("transforms")[$(this).css("transform").substr(0, idx)] = $(this).css("transform").substring(idx + 1, ($(this).css("transform").length - 1))
+        }
+    }
+    $(this).data("transforms")[type] = value
+
+    const transforms = $(this).data("transforms")
+
+    let all_transforms = ""
+    Object.keys(transforms).forEach(transform => {
+        all_transforms += transform + "(" + transforms[transform] + ") "
+    });
+
+    $(this).css("transform", all_transforms)
+}
+
+
+function add_smooth_scroll(elem, speed = .05, keep_inital = false) {
+    let pos = 0
+
+    function scroll_s() {
+        pos += Math.round((window.pageYOffset - pos) * speed)
+
+        pos = Math.min(pos, window.innerHeight)
+        elem.apply_transform("translateY", `${-1 * pos}px`, keep_inital)
+        elem.apply_transform("translateZ", "0")
+
+        callScroll = requestAnimationFrame(scroll_s)
+    }
+    scroll_s();
+}
+
+
+function add_rotate_scroll(elem, speed, keep_inital = false) {
+    function scroll_r() {
+
+        if (elem.is_in_viewport()) {
+
+            let angle = (window.pageYOffset / 10) * speed
+            elem.apply_transform("rotate", `${angle}deg`, keep_inital)
+        }
+
+        callRot = requestAnimationFrame(scroll_r)
+        $("#head").overflow_fix()
+    }
+    scroll_r();
+}
+
+
+function add_parallax(elem, speed = 1) {
+
+
+
+    $(document).mousemove(function (mouse) {
+        function parallax_s() {
+            let mx = (window.innerWidth - mouse.pageX * speed) / 100 * -1
+            let my = (window.innerHeight - mouse.pageY * speed) / 100 * -1
+
+            elem.css("margin-left", `${mx}px`)
+            elem.css("margin-top", `${my}px`)
+
+        }
+
+        requestAnimationFrame(parallax_s)
+    })
+
+}
