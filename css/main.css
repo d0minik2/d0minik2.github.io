@@ -342,7 +342,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .head .titles {
-    bottom: 60px;
+    bottom: 30px;
     flex-direction: column-reverse;
     align-items: center;
     z-index: 2;
@@ -404,7 +404,7 @@ body {
   margin-bottom: 50px;
 }
 .gallery .gallery-items div img {
-  width: 80vw;
+  width: 100%;
   max-width: 600px;
   z-index: 10;
   height: 100%;

@@ -17,6 +17,7 @@ $.fn.overflow_fix = function () {
 }
 
 $.fn.apply_transform = function (type, value, keep_inital = false) {
+
     if ($(this).data("transforms") == undefined) {
         $(this).data("transforms", {})
 
@@ -27,18 +28,32 @@ $.fn.apply_transform = function (type, value, keep_inital = false) {
     }
     $(this).data("transforms")[type] = value
 
-    const transforms = $(this).data("transforms")
+    if (!$(this).data("transform_block")) {
 
-    let all_transforms = ""
-    Object.keys(transforms).forEach(transform => {
-        all_transforms += transform + "(" + transforms[transform] + ") "
-    });
+        const transforms = $(this).data("transforms")
 
-    $(this).css("transform", all_transforms)
+        let all_transforms = ""
+        Object.keys(transforms).forEach(transform => {
+            all_transforms += transform + "(" + transforms[transform] + ") "
+        });
+
+        $(this).css("transform", all_transforms)
+    }
+
+}
+
+$.fn.block_transforms = function () {
+    $(this).data("transform_block", true)
+}
+
+$.fn.unblock_transforms = function () {
+    $(this).data("transform_block", false)
 }
 
 
+
 function add_smooth_scroll(elem, speed = .05, keep_inital = false) {
+    elem.unblock_transforms()
     let pos = 0
 
     function scroll_s() {
@@ -55,6 +70,7 @@ function add_smooth_scroll(elem, speed = .05, keep_inital = false) {
 
 
 function add_rotate_scroll(elem, speed, keep_inital = false) {
+    elem.unblock_transforms()
     function scroll_r() {
 
         if (elem.is_in_viewport()) {
@@ -71,8 +87,7 @@ function add_rotate_scroll(elem, speed, keep_inital = false) {
 
 
 function add_parallax(elem, speed = 1) {
-
-
+    elem.unblock_transforms()
 
     $(document).mousemove(function (mouse) {
         function parallax_s() {
@@ -87,4 +102,27 @@ function add_parallax(elem, speed = 1) {
         requestAnimationFrame(parallax_s)
     })
 
+}
+
+
+function is_small_media() {
+    return window.matchMedia("(max-width: 800px)").matches
+}
+
+
+function on_media_change(fn_small, fn_normal) {
+    const media = window.matchMedia("(max-width: 800px)")
+    if (media.matches) {
+        fn_small()
+    } else {
+        fn_normal()
+    }
+
+    media.addEventListener("change", function () {
+        if (media.matches) {
+            fn_small()
+        } else {
+            fn_normal()
+        }
+    })
 }
