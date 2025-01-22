@@ -209,7 +209,7 @@ body {
         @include center;
         width: 35vw;
         z-index: -1;
-        opacity: 0.9;
+        // opacity: 0.9;
         @media screen and (max-width: map-get($breakpoints, medium)) {
             width: 65vw;
         }
