@@ -133,7 +133,7 @@ html {
   background-image: url(../assets/background.png);
   background-attachment: fixed;
   background-position: center top;
-  background-size: cover;
+  background-size: 100% 100%;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -337,18 +337,18 @@ body {
   z-index: 2;
 }
 .head .titles .socials img {
-  width: 1em;
-  height: 1em;
+  width: 0.7em;
+  height: 0.7em;
 }
 @media screen and (max-width: 800px) {
   .head .titles {
-    bottom: 90px;
+    bottom: 60px;
     flex-direction: column-reverse;
     align-items: center;
     z-index: 2;
   }
   .head .titles h1 {
-    font-size: 15vw;
+    font-size: 22vw;
     z-index: -1;
   }
   .head .titles .socials {

@@ -31,7 +31,7 @@ html {
     background-image: url(../assets/background.png);
     background-attachment: fixed;
     background-position: center top;
-    background-size: cover;
+    background-size: 100% 100%;
 
     font-family: $font-primary;
     font-size: $font-size-primary;
@@ -246,13 +246,13 @@ body {
 
         .socials {
             img {
-                width: 1em;
-                height: 1em;
+                width: 0.7em;
+                height: 0.7em;
             }
         }
 
         @media screen and (max-width: map-get($breakpoints, medium)) {
-            bottom: $padding-primary * 3;
+            bottom: $padding-primary * 2;
             flex-direction: column-reverse;
             align-items: center;
             z-index: 2;
@@ -260,7 +260,8 @@ body {
             h1 {
                 // font-size: $font-size-header-large;
                 // @include font-outline;
-                font-size: 15vw;
+                // margin-top: 800px;
+                font-size: 22vw;
                 z-index: -1;
             }
             .socials {
