@@ -398,7 +398,8 @@ body {
   overflow: hidden;
   gap: 100px;
   justify-content: center;
-  padding: 90px;
+  padding: 60px;
+  padding-top: 90px;
 }
 .gallery .gallery-items div {
   color: #782d33;
@@ -408,8 +409,6 @@ body {
   width: 100%;
   max-width: 600px;
   z-index: 10;
-  height: 100%;
-  border-radius: 5px;
   -o-object-fit: contain;
      object-fit: contain;
   pointer-events: none;
@@ -418,4 +417,9 @@ body {
   color: #ccb493;
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 40px;
+}
+@media screen and (max-width: 800px) {
+  .gallery .gallery-items div {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

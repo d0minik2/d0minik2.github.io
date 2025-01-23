@@ -326,7 +326,8 @@ body {
         overflow: hidden;
         gap: 100px;
         justify-content: center;
-        padding: $padding-primary * 3;
+        padding: $padding-primary * 2;
+        padding-top: $padding-primary * 3;
 
         div {
             color: $color-secondary;
@@ -335,8 +336,7 @@ body {
                 width: 100%;
                 max-width: 600px;
                 z-index: 10;
-                height: 100%;
-                border-radius: 5px;
+                // border-radius: 5px;
                 object-fit: contain;
                 pointer-events: none;
             }
@@ -345,6 +345,10 @@ body {
                 color: $color-primary;
                 font-family: $font-header;
                 font-size: $font-size-primary * 2;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, medium)) {
+                width: 100%;
             }
         }
     }
