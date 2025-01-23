@@ -133,7 +133,7 @@ html {
   background-image: url(../assets/background.png);
   background-attachment: fixed;
   background-position: center top;
-  background-size: 100% 100%;
+  background-size: cover;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
@@ -303,6 +303,7 @@ body {
   transform: translate(-50%, -50%);
   width: 35vw;
   z-index: -1;
+  pointer-events: none;
 }
 @media screen and (max-width: 800px) {
   .head .mask {
@@ -320,6 +321,7 @@ body {
   mix-blend-mode: difference;
 }
 .head .logo img {
+  pointer-events: none;
   position: absolute;
   width: 100%;
 }
@@ -333,7 +335,6 @@ body {
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 50px;
   text-transform: uppercase;
-  mix-blend-mode: difference;
   z-index: 2;
 }
 .head .titles .socials img {
@@ -411,6 +412,7 @@ body {
   border-radius: 5px;
   -o-object-fit: contain;
      object-fit: contain;
+  pointer-events: none;
 }
 .gallery .gallery-items div .artwork-title {
   color: #ccb493;
