@@ -18,6 +18,14 @@
     visibility: hidden;
   }
 }
+@keyframes float {
+  0%, 100% {
+    margin-top: -10px;
+  }
+  50% {
+    margin-top: 10px;
+  }
+}
 *,
 *:before,
 *:after {
@@ -323,6 +331,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .mask {
+    animation: float 5s cubic-bezier(0.17, 0.67, 0.91, 0.69) infinite;
     width: 65vw;
   }
 }
