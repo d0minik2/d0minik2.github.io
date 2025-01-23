@@ -137,6 +137,12 @@ html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+@media screen and (max-width: 800px) {
+  html {
+    background-size: 120% 110%;
+    background-position: center;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;

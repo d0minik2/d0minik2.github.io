@@ -30,6 +30,13 @@ const artworks = [
         "technique": "oil on canvas",
         "size": "60x80 cm"
     }
+    ,
+    {
+        "filename": "06.png",
+        "title": "untitled",
+        "technique": "oil on plywood",
+        "size": "60x80 cm"
+    }
 ]
 
 
