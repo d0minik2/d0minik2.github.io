@@ -139,7 +139,7 @@ html {
 }
 @media screen and (max-width: 800px) {
   html {
-    background-size: 120% 110%;
+    background-size: 120% 11 0%;
     background-position: center;
   }
 }
@@ -312,13 +312,7 @@ body {
   }
 }
 
-.head {
-  width: 75%;
-  height: 100vh;
-  z-index: -10;
-  margin: 0 auto;
-}
-.head .mask {
+.mask {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -328,9 +322,16 @@ body {
   pointer-events: none;
 }
 @media screen and (max-width: 800px) {
-  .head .mask {
+  .mask {
     width: 65vw;
   }
+}
+
+.head {
+  width: 75%;
+  height: 100vh;
+  z-index: -10;
+  margin: 0 auto;
 }
 .head .logo {
   position: relative;
