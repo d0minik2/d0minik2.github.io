@@ -431,6 +431,13 @@ body {
   gap: 100px;
   justify-content: center;
   padding: 120px;
+  padding-top: 150px;
+}
+@media screen and (max-width: 800px) {
+  .gallery .gallery-items {
+    padding: 30px;
+    padding-top: 150px;
+  }
 }
 .gallery .gallery-items div {
   color: #782d33;
