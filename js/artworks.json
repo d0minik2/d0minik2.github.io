@@ -191,6 +191,24 @@
             "title": "untitled",
             "technique": "acrylic on canvas",
             "size": "50x70"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54285044304_069dcf6c99_b.jpg",
+            "title": "untitled",
+            "technique": "oil on canvas",
+            "size": "80x60cm"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54285050138_f50c459267_b.jpg",
+            "title": "untitled",
+            "technique": "oil on canvas",
+            "size": "50x70cm"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54283915462_6595ae966a_b.jpg",
+            "title": "untitled",
+            "technique": "oil on canvas",
+            "size": "50x70"
         }
     ]
 }
