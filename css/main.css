@@ -147,8 +147,7 @@ html {
 }
 @media screen and (max-width: 800px) {
   html {
-    background-size: 120% 11 0%;
-    background-position: center;
+    background-image: none;
   }
 }
 
