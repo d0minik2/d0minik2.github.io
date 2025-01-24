@@ -29,8 +29,7 @@
             "title": "untitled",
             "technique": "oil on canvas",
             "size": "60x80 cm"
-        }
-        ,
+        },
         {
             "filename": "https://live.staticflickr.com/65535/54284483376_f0948fa5ae_z.jpg",
             "title": "untitled",
@@ -66,8 +65,7 @@
             "title": "untitled",
             "technique": "acrylic on plywood",
             "size": "30x40 cm"
-        }
-        ,
+        },
         {
             "filename": "https://live.staticflickr.com/65535/54283596932_eb0587a129.jpg",
             "title": "untitled",
@@ -96,8 +94,7 @@
             "filename": "https://live.staticflickr.com/65535/54284483276_79b95090bc.jpg",
             "title": "untitled",
             "technique": "acrylic on canvas",
-            "size": "50x50 cm"
+            "size": "50x50"
         }
     ]
-    
 }
