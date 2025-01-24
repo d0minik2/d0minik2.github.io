@@ -23,7 +23,7 @@ function load_content(artworks) {
         let img = $("<img>").attr("src", `${artwork.filename}`)
             .attr("alt", artwork.title)
             .attr("loading", "lazy")
-        let title = $("<h4>").addClass("artwork-title").text(artwork.title)
+        let title = $("<h6>").addClass("artwork-title").text(artwork.title)
         let technique = $("<p>").addClass("artwork-technique").text(artwork.technique)
         let size = $("<p>").addClass("artwork-size").text(artwork.size)
 
