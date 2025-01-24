@@ -330,7 +330,7 @@ body {
 }
 @media screen and (max-width: 800px) {
   .mask {
-    animation: float 5s cubic-bezier(0.17, 0.67, 0.91, 0.69) infinite;
+    animation: float 5s cubic-bezier(0.58, -0.02, 0.57, 1) infinite;
     width: 65vw;
   }
 }

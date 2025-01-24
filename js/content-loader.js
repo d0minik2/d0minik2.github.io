@@ -1,5 +1,5 @@
 const shuffle_artworks = true
-const artworks_json = "https://raw.githubusercontent.com/d0minik2/d0minik2.github.io/refs/heads/main/js/artworks.json"
+const artworks_json = "https://dominik.works/js/artworks.json"
 
 function shuffle(array) {
     let currentIndex = array.length;
@@ -47,4 +47,5 @@ $(document).ready(function () {
     fetch(artworks_json)
         .then((response) => response.json())
         .then((json) => load_content(json.artworks));
+
 })
