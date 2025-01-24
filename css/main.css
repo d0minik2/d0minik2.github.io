@@ -430,8 +430,7 @@ body {
   overflow: hidden;
   gap: 100px;
   justify-content: center;
-  padding: 60px;
-  padding-top: 150px;
+  padding: 120px;
 }
 .gallery .gallery-items div {
   color: #782d33;
