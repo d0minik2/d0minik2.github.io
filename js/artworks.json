@@ -73,7 +73,7 @@
             "size": "50x70 cm"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/54284483311_aa80357796.jpg",
+            "filename": "https://live.staticflickr.com/65535/54284803804_fa9531e5a9.jpg",
             "title": "untitled",
             "technique": "acrylic on plywood",
             "size": "30x40 cm"
@@ -95,6 +95,24 @@
             "title": "untitled",
             "technique": "acrylic on canvas",
             "size": "50x50"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54284803889_054a449faf.jpg",
+            "title": "untitled",
+            "technique": "acrylic on canvas",
+            "size": "50x70 cm"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54284803809_fbc1e535c2.jpg",
+            "title": "Moth",
+            "technique": "linocut",
+            "size": "A4"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54283675762_a0e89a385e.jpg",
+            "title": "untitled",
+            "technique": "Acrylic on canvas",
+            "size": "50x70 cm"
         }
     ]
 }
