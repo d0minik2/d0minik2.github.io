@@ -126,3 +126,22 @@ function on_media_change(fn_small, fn_normal) {
         }
     })
 }
+
+
+function img_bg_overlay() {
+    const overlay = $(".gallery > .overlay")
+    const gallery = $(".gallery")
+
+    // fix bug when leaving by scroll
+
+    $(".artwork > img").mouseover(function () {
+        if ($(window).scrollTop() - gallery.offset().top > 0) {
+
+            overlay.css("background-image", `url(${$(this).attr("src")})`)
+            overlay.addClass("visible")
+        }
+    })
+    $(".artwork > img").mouseleave(function () {
+        overlay.removeClass("visible")
+    })
+}

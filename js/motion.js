@@ -36,5 +36,7 @@ $(document).ready(function () {
     if (true) {
         // add_smooth_scroll($(".gallery"), .03, false)
     }
+
+
 })
 

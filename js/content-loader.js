@@ -46,6 +46,9 @@ function load_content(artworks) {
 $(document).ready(function () {
     fetch(artworks_json)
         .then((response) => response.json())
-        .then((json) => load_content(json.artworks));
+        .then((json) => {
+            load_content(json.artworks)
+            img_bg_overlay()
+        });
 
 })
