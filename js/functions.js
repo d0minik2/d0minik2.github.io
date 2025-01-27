@@ -135,10 +135,12 @@ function img_bg_overlay() {
     // fix bug when leaving by scroll
 
     $(".artwork > img").mouseover(function () {
-        if ($(window).scrollTop() - gallery.offset().top > 0) {
+        if (!is_small_media()) {
+            if ($(window).scrollTop() - gallery.offset().top > 0) {
 
-            overlay.css("background-image", `url(${$(this).attr("src")})`)
-            overlay.addClass("visible")
+                overlay.css("background-image", `url(${$(this).attr("src")})`)
+                overlay.addClass("visible")
+            }
         }
     })
     $(".artwork > img").mouseleave(function () {
