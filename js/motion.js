@@ -28,7 +28,10 @@ $(document).ready(function () {
     if (true) {
         add_smooth_scroll($(".titles"), .03, false)
         // add_smooth_scroll($(".mask"), .03, true)
-        // add_parallax($(".mask"), 1.5)
+        if (!is_small_media()) {
+
+            add_parallax($(".mask"), 1.5)
+        }
     }
 
 

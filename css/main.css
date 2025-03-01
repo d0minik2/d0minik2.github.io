@@ -354,6 +354,11 @@ body {
   position: absolute;
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  .head .logo {
+    margin-top: 12vh;
+  }
+}
 .head .titles {
   position: absolute;
   width: inherit;
@@ -482,4 +487,12 @@ body {
   .gallery .gallery-items div {
     width: 100%;
   }
+}
+
+.footer {
+  display: none;
+  background-color: #0a0b0a;
+  padding: 90px;
+  color: #ccb493;
+  z-index: 1000;
 }/*# sourceMappingURL=main.css.map */
