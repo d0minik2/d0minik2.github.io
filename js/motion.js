@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    loader($(".banner-top"))
+
     // --- LOGO ANIMATION ---
 
     const speed_multiplier = is_small_media() ? 1 : 1
@@ -41,7 +43,6 @@ $(document).ready(function () {
     if (true) {
         // add_smooth_scroll($(".gallery"), .03, false)
     }
-
 
 })
 

@@ -138,7 +138,7 @@ input {
 
 html {
   background-color: #0c0c0c;
-  background-image: url(https://live.staticflickr.com/65535/54394227917_f3db29b686_o.png);
+  background-image: url(https://live.staticflickr.com/65535/54394227917_32e83109d9_c.jpg);
   background-attachment: fixed;
   background-position: center top;
   background-size: 100% 100%;
@@ -177,31 +177,22 @@ body::before {
   background-repeat: no-repeat;
   z-index: -1;
 }
-@media screen and (min-width: 800px) {
-  body::after {
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: #0c0c0c;
-    width: 100%;
-    height: 100vh;
-    mix-blend-mode: hard-light;
-    animation: fade-out 1s linear forwards;
-  }
-}
 
 .loader {
-  z-index: 1000;
+  color: #ccb493;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
   background-color: #0c0c0c;
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: 100% 100%;
-  display: none;
+  width: 100%;
+  height: 100vh;
 }
 
 .nav {
