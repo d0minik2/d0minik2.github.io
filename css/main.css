@@ -336,18 +336,20 @@ body::before {
   left: 50%;
   top: 50dvh;
   transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .banner.banner-top {
   z-index: 999;
   opacity: 1;
 }
 .banner.banner-bg {
-  width: 41.5vw;
+  width: 41vw;
   filter: blur(10px);
 }
 @media screen and (max-width: 800px) {
   .banner {
-    animation: float 5s cubic-bezier(0.58, -0.02, 0.57, 1) infinite;
     width: 95vw;
   }
   .banner.banner-bg {
@@ -375,6 +377,9 @@ body::before {
   pointer-events: none;
   position: absolute;
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media screen and (max-width: 800px) {
   .head .logo {
