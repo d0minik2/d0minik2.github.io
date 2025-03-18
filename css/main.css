@@ -320,14 +320,14 @@ body {
 .banner {
   max-width: 100%;
   position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 35vw;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   opacity: 1;
   border-radius: 30px;
+  left: 50%;
+  top: 50dvh;
+  transform: translate(-50%, -50%);
 }
 .banner.banner-top {
   z-index: 999;

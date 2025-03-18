@@ -80,7 +80,7 @@ function add_rotate_scroll(elem, speed, keep_inital = false) {
         }
 
         callRot = requestAnimationFrame(scroll_r)
-        $("#head").overflow_fix()
+        // $("#head").overflow_fix()
     }
     scroll_r();
 }
