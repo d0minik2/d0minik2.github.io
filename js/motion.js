@@ -30,7 +30,7 @@ $(document).ready(function () {
         // add_smooth_scroll($(".mask"), .03, true)
         if (!is_small_media()) {
 
-            add_parallax($(".mask"), 1.5)
+            // add_parallax($(".mask"), 1.5)
         }
     }
 
