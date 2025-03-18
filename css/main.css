@@ -193,6 +193,7 @@ body::before {
   background-color: #0c0c0c;
   width: 100%;
   height: 100vh;
+  display: none;
 }
 
 .nav {
