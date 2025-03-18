@@ -1,23 +1,25 @@
 $(document).ready(function () {
     // --- LOGO ANIMATION ---
+
+    const speed_multiplier = is_small_media() ? 1 : 1
     if (true) {
-        add_smooth_scroll($(".logo-letter-1"), .02) // D
-        add_rotate_scroll($(".logo-letter-1"), .1)
+        add_smooth_scroll($(".logo-letter-1"), .02 * speed_multiplier) // D
+        add_rotate_scroll($(".logo-letter-1"), .4 * speed_multiplier)
 
-        add_smooth_scroll($(".logo-letter-2"), .03) // O
+        add_smooth_scroll($(".logo-letter-2"), .03 * speed_multiplier) // O
 
-        add_rotate_scroll($(".logo-letter-3"), -.1) // M
-        add_smooth_scroll($(".logo-letter-3"), .03)
+        add_rotate_scroll($(".logo-letter-3"), -.1 * speed_multiplier) // M
+        add_smooth_scroll($(".logo-letter-3"), .03 * speed_multiplier)
 
-        add_smooth_scroll($(".logo-letter-4"), .04) // I
+        add_smooth_scroll($(".logo-letter-4"), .04 * speed_multiplier) // I
 
-        add_rotate_scroll($(".logo-letter-5"), .08) // N
-        add_smooth_scroll($(".logo-letter-5"), .02)
+        add_rotate_scroll($(".logo-letter-5"), .08 * speed_multiplier) // N
+        add_smooth_scroll($(".logo-letter-5"), .02 * speed_multiplier)
 
-        add_smooth_scroll($(".logo-letter-6"), .05) // I
+        add_smooth_scroll($(".logo-letter-6"), .05 * speed_multiplier) // I
 
-        add_rotate_scroll($(".logo-letter-7"), -.2) // K
-        add_smooth_scroll($(".logo-letter-7"), .02)
+        add_rotate_scroll($(".logo-letter-7"), -.2 * speed_multiplier) // K
+        add_smooth_scroll($(".logo-letter-7"), .02 * speed_multiplier)
     }
 
 
