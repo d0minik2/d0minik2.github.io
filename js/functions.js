@@ -151,10 +151,12 @@ function img_bg_overlay() {
 
 function loader(trigger_elem) {
     const loader = $(".loader")
-    console.log(loader)
 
     trigger_elem.on("load", function () {
-        console.log("loaded")
         loader.css("animation", "fade-out 1s linear forwards")
+
+        setTimeout(() => {
+            loader.css("display", "none")
+        }, 1000)
     })
 }
