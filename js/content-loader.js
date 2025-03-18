@@ -1,4 +1,4 @@
-const shuffle_artworks = true
+const shuffle_artworks = false
 const artworks_json = "https://dominik.works/js/artworks.json"
 
 function shuffle(array) {
