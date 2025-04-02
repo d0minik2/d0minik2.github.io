@@ -132,8 +132,6 @@ function img_bg_overlay() {
     const overlay = $(".gallery > .overlay")
     const gallery = $(".gallery")
 
-    // fix bug when leaving by scroll
-
     $(".artwork > img").mouseover(function () {
         if (!is_small_media()) {
             if ($(window).scrollTop() - gallery.offset().top > 0) {
@@ -155,10 +153,23 @@ function loader(trigger_elem) {
     loader.css("display", "flex")
 
     trigger_elem.on("load", function () {
-        loader.css("animation", "fade-out 1s linear forwards")
+        if (loader.css("display") != "none") {
+            loader.css("animation", "fade-out .5s linear forwards")
+        }
 
         setTimeout(() => {
             loader.css("display", "none")
-        }, 1000)
+        }, 501)
     })
+
+    // loader is visible no more than 5s
+    setTimeout(() => {
+        if (loader.css("display") != "none") {
+            loader.css("animation", "fade-out .5s linear forwards")
+        }
+
+        setTimeout(() => {
+            loader.css("display", "none")
+        }, 501)
+    }, 5000)
 }
