@@ -152,6 +152,8 @@ function img_bg_overlay() {
 function loader(trigger_elem) {
     const loader = $(".loader")
 
+    loader.css("display", "flex")
+
     trigger_elem.on("load", function () {
         loader.css("animation", "fade-out 1s linear forwards")
 

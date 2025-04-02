@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // loader($(".banner-top"))
+    loader($(".banner-top"))
 
     // --- LOGO ANIMATION ---
 
