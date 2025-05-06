@@ -140,7 +140,7 @@
         },
         {
             "filename": "https://live.staticflickr.com/65535/54283675762_a0e89a385e_b.jpg",
-            "title": "zaćmienie",
+            "title": "za\u00c4\u2021mienie",
             "technique": "Acrylic on canvas",
             "size": "50x70 cm"
         },
@@ -203,6 +203,18 @@
             "title": "untitled",
             "technique": "oil on canvas",
             "size": "50x70"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54499846382_8d26d5601e_o.png",
+            "title": "untitled",
+            "technique": "oil on plywood",
+            "size": "60x80"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54500714066_25127cefd3_o.png",
+            "title": "untitled",
+            "technique": "oil on plywood",
+            "size": "60x60"
         }
     ]
 }
