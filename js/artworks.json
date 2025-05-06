@@ -7,7 +7,7 @@
             "size": "60x80 cm"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/54284910140_efa9ef1e55_b.jpg",
+            "filename": "https://live.staticflickr.com/65535/54501001788_5c585c559c_o.jpg",
             "title": "antyutopia",
             "technique": "acrylic on canvas",
             "size": "50x70 cm"
@@ -77,12 +77,6 @@
             "title": "untitled",
             "technique": "acrylic on plywood",
             "size": "58x62 cm"
-        },
-        {
-            "filename": "https://live.staticflickr.com/65535/54284724864_1d05aa9551_b.jpg",
-            "title": "untitled",
-            "technique": "acrylic on canvas",
-            "size": "60x80 cm"
         },
         {
             "filename": "https://live.staticflickr.com/65535/54284724854_8a133034ee_b.jpg",
@@ -169,6 +163,18 @@
             "size": "50x50 cm"
         },
         {
+            "filename": "https://live.staticflickr.com/65535/54500714066_25127cefd3_o.png",
+            "title": "untitled",
+            "technique": "oil on plywood",
+            "size": "60x60"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54284724864_1d05aa9551_b.jpg",
+            "title": "untitled",
+            "technique": "acrylic on canvas",
+            "size": "60x80 cm"
+        },
+        {
             "filename": "https://live.staticflickr.com/65535/54285070445_0d6f208746_b.jpg",
             "title": "untitled",
             "technique": "acrylic on canvas",
@@ -209,12 +215,6 @@
             "title": "untitled",
             "technique": "oil on plywood",
             "size": "60x80"
-        },
-        {
-            "filename": "https://live.staticflickr.com/65535/54500714066_25127cefd3_o.png",
-            "title": "untitled",
-            "technique": "oil on plywood",
-            "size": "60x60"
         }
     ]
 }
