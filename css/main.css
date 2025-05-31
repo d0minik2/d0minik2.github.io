@@ -394,6 +394,10 @@ body::before {
 .head .titles .socials img {
   width: 0.7em;
   height: 0.7em;
+  transition: 0.3s;
+}
+.head .titles .socials img:hover {
+  transform: scale(1.2);
 }
 @media screen and (max-width: 800px) {
   .head .titles {
@@ -408,10 +412,6 @@ body::before {
   }
   .head .titles .socials {
     opacity: 0.8;
-  }
-  .head .titles .socials mg {
-    width: 0.5em;
-    height: 0.5em;
   }
 }
 @media screen and (max-width: 800px) {
