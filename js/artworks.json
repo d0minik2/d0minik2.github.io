@@ -175,6 +175,12 @@
             "size": ""
         },
         {
+            "filename": "https://live.staticflickr.com/65535/55026105787_800b043a21_b.jpg",
+            "title": "untitled",
+            "technique": "linocut",
+            "size": ""
+        },
+        {
             "filename": "https://live.staticflickr.com/65535/54284893118_365083fe6e_b.jpg",
             "title": "untitled",
             "technique": "acrylic on canvas",
@@ -247,6 +253,12 @@
             "size": "50x70"
         },
         {
+            "filename": "https://live.staticflickr.com/65535/55027193618_ecd58ff9d2_b.jpg",
+            "title": "untitled",
+            "technique": "photography",
+            "size": ""
+        },
+        {
             "filename": "https://live.staticflickr.com/65535/54283915462_6595ae966a_b.jpg",
             "title": "untitled",
             "technique": "oil on canvas",
@@ -257,6 +269,12 @@
             "title": "untitled",
             "technique": "oil on plywood",
             "size": "60x80 cm"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/55027010006_8bc4ebd71c_b.jpg",
+            "title": "untitled",
+            "technique": "digital (photoshop)",
+            "size": ""
         }
     ]
 }
