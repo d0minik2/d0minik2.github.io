@@ -39,7 +39,7 @@
         {
             "filename": "https://live.staticflickr.com/65535/55027264475_6be4e4eaf3_b.jpg",
             "title": "untitled",
-            "technique": "mixed (oil, clay) on plywood",
+            "technique": "mixed (oil, clay, other) on plywood",
             "size": "60x90"
         },
         {
@@ -217,12 +217,6 @@
             "size": "60x80"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/54284724864_1d05aa9551_b.jpg",
-            "title": "untitled",
-            "technique": "acrylic on canvas",
-            "size": "60x80 cm"
-        },
-        {
             "filename": "https://live.staticflickr.com/65535/54285070445_0d6f208746_b.jpg",
             "title": "untitled",
             "technique": "acrylic on canvas",
@@ -265,16 +259,28 @@
             "size": "50x70"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/54284483376_f0948fa5ae_b.jpg",
+            "filename": "https://live.staticflickr.com/65535/55099446693_a7e8a7b576_b.jpg",
             "title": "untitled",
-            "technique": "oil on plywood",
-            "size": "60x80 cm"
+            "technique": "digital",
+            "size": "A4"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/55027010006_8bc4ebd71c_b.jpg",
+            "filename": "https://live.staticflickr.com/65535/55098368902_ee5dc9d68a_b.jpg",
             "title": "untitled",
-            "technique": "digital (photoshop)",
-            "size": ""
+            "technique": "digital",
+            "size": "A4"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/55099514619_bacbb71222_b.jpg",
+            "title": "untitled",
+            "technique": "digital",
+            "size": "A4"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/55099514624_d3dbdc5424_b.jpg",
+            "title": "untitled",
+            "technique": "digital",
+            "size": "A4"
         }
     ]
 }
