@@ -43,12 +43,6 @@
             "size": "60x90"
         },
         {
-            "filename": "https://live.staticflickr.com/65535/54358301938_9398459b44_k.jpg",
-            "title": "untitled",
-            "technique": "oil on plywood",
-            "size": "60x80"
-        },
-        {
             "filename": "https://live.staticflickr.com/65535/54284724939_c653b8f064_b.jpg",
             "title": "wie viel uhr ist es",
             "technique": "acrylic on canvas",
@@ -113,6 +107,12 @@
             "title": "untitled",
             "technique": "acrylic on plywood",
             "size": "30x40 cm"
+        },
+        {
+            "filename": "https://live.staticflickr.com/65535/54358301938_9398459b44_k.jpg",
+            "title": "untitled",
+            "technique": "oil on plywood",
+            "size": "60x80"
         },
         {
             "filename": "https://live.staticflickr.com/65535/54283596932_eb0587a129_b.jpg",
