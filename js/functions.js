@@ -141,9 +141,36 @@ function img_bg_overlay() {
             }
         }
     })
-    $(".artwork > img").mouseleave(function () {
-        overlay.removeClass("visible")
+
+
+    $(window).scroll(function () {
+        let changed = false
+
+        $(".artwork > img").each(function () {
+
+            console.log($(window).scrollTop() > $(window).height())
+            if ($(this).is_in_viewport() && !changed) {
+
+                // if ($(window).scrollTop() - gallery.offset().top > 0) {
+                if ($(window).scrollTop() > $(window).height() / 2) {
+                    changed = true
+                    overlay.css("background-image", `url(${$(this).attr("src")})`)
+                    overlay.addClass("visible")
+                    $(".lajkonik").css("opacity", 0)
+                } else {
+                    $(".lajkonik").css("opacity", 1)
+                }
+            }
+        })
+
+        if (!changed) {
+            overlay.removeClass("visible")
+        }
     })
+
+    // $(".artwork > img").mouseleave(function () {
+    //     overlay.removeClass("visible")
+    // })
 }
 
 

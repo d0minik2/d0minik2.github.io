@@ -1,6 +1,12 @@
 {
     "artworks": [
         {
+            "filename": "https://live.staticflickr.com/65535/54357199022_8a52f377a9_k.jpg",
+            "title": "untitled",
+            "technique": "oil on plywood",
+            "size": "60x90"
+        },
+        {
             "filename": "https://live.staticflickr.com/65535/54283597067_cc5c168d99_b.jpg",
             "title": "untitled",
             "technique": "oil on canvas",
@@ -11,12 +17,6 @@
             "title": "antyutopia",
             "technique": "acrylic on canvas",
             "size": "50x70 cm"
-        },
-        {
-            "filename": "https://live.staticflickr.com/65535/54357199022_8a52f377a9_k.jpg",
-            "title": "untitled",
-            "technique": "oil on plywood",
-            "size": "60x90"
         },
         {
             "filename": "https://live.staticflickr.com/65535/54714623826_50747d0a81_b.jpg",

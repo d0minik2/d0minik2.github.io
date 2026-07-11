@@ -31,17 +31,19 @@ $(document).ready(function () {
     // --- OTHER HEAD ANIMATIONS --- 
     if (true) {
         add_smooth_scroll($(".titles"), .03, false)
+        // add_smooth_scroll($(".banner"), .07, true)
+        // add_smooth_scroll($(".lajkonik"), .02, false)
         // add_smooth_scroll($(".mask"), .03, true)
         if (!is_small_media()) {
 
-            add_parallax($(".banner"), 1.5)
+            // add_parallax($(".banner"), 1.5)
         }
     }
 
 
     // --- GALLERY ANIMATIONS --- 
     if (true) {
-        // add_smooth_scroll($(".gallery"), .03, false)
+        add_smooth_scroll($(".gallery-items"), .04, false)
     }
 
 })

@@ -324,7 +324,7 @@ body::before {
   z-index: 1;
   pointer-events: none;
   opacity: 1;
-  border-radius: 30px;
+  border-radius: 15px;
   left: 50%;
   top: 50dvh;
   transform: translate(-50%, -50%);
@@ -337,7 +337,7 @@ body::before {
   opacity: 1;
 }
 .banner.banner-bg {
-  width: 41vw;
+  width: 36vw;
   filter: blur(10px);
 }
 @media screen and (max-width: 800px) {
@@ -348,6 +348,12 @@ body::before {
     width: 100vw;
     filter: blur(5px);
   }
+}
+
+.lajkonik {
+  position: absolute;
+  height: 150vh;
+  transition: 0.3s;
 }
 
 .head {
@@ -422,23 +428,10 @@ body::before {
 
 .gallery {
   z-index: 1000;
-  margin-top: 50px;
+  margin-top: 150px;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
   position: relative;
-  background-color: #0c0c0c;
-}
-.gallery::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  background-image: url(../assets/142.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat-x;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 50px;
 }
 .gallery .overlay {
   position: fixed;
@@ -453,11 +446,11 @@ body::before {
   opacity: 0;
   background-position: center;
   background-size: cover;
-  transition: 0.5s;
+  transition: 1s;
   filter: blur(15px);
 }
 .gallery .overlay.visible {
-  opacity: 0.22;
+  opacity: 0.44;
 }
 .gallery h2 {
   display: none;
@@ -471,8 +464,9 @@ body::before {
 }
 .gallery .gallery-items {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   overflow: hidden;
   gap: 100px;
   justify-content: center;
@@ -491,9 +485,10 @@ body::before {
 }
 .gallery .gallery-items div img {
   width: 100%;
-  max-width: 600px;
-  max-height: 90vh;
+  max-width: 700px;
+  max-height: 95vh;
   z-index: 10;
+  border-radius: 15px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: 1s;
