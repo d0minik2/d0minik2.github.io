@@ -145,6 +145,12 @@ html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
+@media screen and (max-width: 800px) {
+  html {
+    background-image: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -429,6 +435,10 @@ body::before {
   .head .titles .socials {
     opacity: 0.8;
   }
+  .head .titles .socials img {
+    width: 0.5em;
+    height: 0.5em;
+  }
 }
 @media screen and (max-width: 800px) {
   .head {
@@ -498,21 +508,29 @@ body::before {
   max-width: 700px;
   max-height: 95vh;
   z-index: 10;
-  border-radius: 15px;
   -o-object-fit: contain;
      object-fit: contain;
   transition: 1s;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .gallery .gallery-items div img:hover {
   transform: scale(1.03);
 }
-.gallery .gallery-items div .artwork-title {
-  display: none;
-  color: #ccb493;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  font-size: 40px;
-  margin-top: 10px;
+.gallery .gallery-items div div {
+  padding: 10px;
+  font-size: 16px;
+  color: #94968b;
+  display: flex;
+  gap: 30px;
+  justify-content: right;
+}
+@media screen and (max-width: 800px) {
+  .gallery .gallery-items div div {
+    font-size: 12px;
+  }
+}
+.gallery .gallery-items div div .artwork-title {
+  font-weight: bold;
 }
 @media screen and (max-width: 800px) {
   .gallery .gallery-items div {

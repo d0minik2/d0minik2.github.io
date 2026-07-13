@@ -23,14 +23,18 @@ function load_content(artworks) {
         let img = $("<img>").attr("src", `${artwork.filename}`)
             .attr("alt", artwork.title)
             .attr("loading", "lazy")
+
+        let description = $("<div>")
         let title = $("<h6>").addClass("artwork-title").text(artwork.title)
         let technique = $("<p>").addClass("artwork-technique").text(artwork.technique)
         let size = $("<p>").addClass("artwork-size").text(artwork.size)
 
-        aw_div.append(img)
-            .append(title)
+        description.append(title)
             .append(technique)
             .append(size)
+
+        aw_div.append(img).append(description)
+
         aw_list.push(aw_div)
     });
 
