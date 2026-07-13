@@ -177,6 +177,11 @@ body::before {
   background-repeat: no-repeat;
   z-index: -1;
 }
+@media screen and (max-width: 800px) {
+  body::before {
+    display: none;
+  }
+}
 
 .loader {
   color: #ccb493;
@@ -292,6 +297,11 @@ body::before {
   pointer-events: all;
   cursor: pointer;
   text-decoration: line-through;
+}
+@media screen and (max-width: 800px) {
+  .nav .topbar {
+    display: none;
+  }
 }
 .nav .left-sidebar {
   position: absolute;
@@ -480,7 +490,7 @@ body::before {
   }
 }
 .gallery .gallery-items div {
-  color: #782d33;
+  color: #94968b;
   margin-bottom: 50px;
 }
 .gallery .gallery-items div img {
@@ -492,11 +502,13 @@ body::before {
   -o-object-fit: contain;
      object-fit: contain;
   transition: 1s;
+  margin-bottom: 20px;
 }
 .gallery .gallery-items div img:hover {
   transform: scale(1.03);
 }
 .gallery .gallery-items div .artwork-title {
+  display: none;
   color: #ccb493;
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 40px;
