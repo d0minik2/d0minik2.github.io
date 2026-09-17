@@ -181,6 +181,7 @@ function loader(trigger_elem) {
     trigger_elem.on("load", function () {
         if (loader.css("display") != "none") {
             loader.css("animation", "fade-out .5s linear forwards")
+            $(".banner").addClass("banner-roll-in")
         }
 
         setTimeout(() => {
@@ -192,6 +193,7 @@ function loader(trigger_elem) {
     setTimeout(() => {
         if (loader.css("display") != "none") {
             loader.css("animation", "fade-out .5s linear forwards")
+            $(".banner").addClass("banner-roll-in")
         }
 
         setTimeout(() => {
