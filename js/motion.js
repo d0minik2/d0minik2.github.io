@@ -43,7 +43,9 @@ $(document).ready(function () {
 
     // --- GALLERY ANIMATIONS --- 
     if (true) {
-        add_smooth_scroll($(".gallery-items"), .04, false)
+        if (!is_small_media()) {
+            add_smooth_scroll($(".gallery-items"), .04, false)
+        }
     }
 
 })
