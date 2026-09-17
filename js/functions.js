@@ -148,7 +148,6 @@ function img_bg_overlay() {
 
         $(".artwork > img").each(function () {
 
-            console.log($(window).scrollTop() > $(window).height())
             if ($(this).is_in_viewport() && !changed) {
 
                 // if ($(window).scrollTop() - gallery.offset().top > 0) {
