@@ -44,10 +44,10 @@
 }
 @keyframes float {
   0%, 100% {
-    margin-top: -5px;
+    padding-top: 0px;
   }
   50% {
-    margin-top: 5px;
+    padding-top: 50px;
   }
 }
 *,
@@ -423,7 +423,7 @@ body::before {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 7vh;
+  margin-top: 8vh;
   height: 70%;
   z-index: 1;
   mix-blend-mode: difference;
@@ -435,11 +435,33 @@ body::before {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  animation: float 10s cubic-bezier(0.4, -0.02, 0.44, 1.02) infinite;
 }
 @media screen and (max-width: 800px) {
   .head .logo {
     margin-top: 17vh;
   }
+}
+.head .logo .logo-letter-1 {
+  animation-delay: 0s;
+}
+.head .logo .logo-letter-2 {
+  animation-delay: 0.5s;
+}
+.head .logo .logo-letter-3 {
+  animation-delay: 0.5s;
+}
+.head .logo .logo-letter-4 {
+  animation-delay: 1s;
+}
+.head .logo .logo-letter-5 {
+  animation-delay: 1.5s;
+}
+.head .logo .logo-letter-6 {
+  animation-delay: 2s;
+}
+.head .logo .logo-letter-7 {
+  animation-delay: 2.5s;
 }
 .head .titles {
   z-index: 2;
@@ -464,7 +486,6 @@ body::before {
 }
 @media screen and (max-width: 800px) {
   .head .titles {
-    bottom: 30px;
     flex-direction: column-reverse;
     align-items: center;
     z-index: 1000;
