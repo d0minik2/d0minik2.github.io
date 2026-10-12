@@ -44,10 +44,10 @@
 }
 @keyframes float {
   0%, 100% {
-    padding-top: 0px;
+    padding-top: 0vh;
   }
   50% {
-    padding-top: 50px;
+    padding-top: 3vh;
   }
 }
 *,
@@ -435,7 +435,6 @@ body::before {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  animation: float 10s cubic-bezier(0.4, -0.02, 0.44, 1.02) infinite;
 }
 @media screen and (max-width: 800px) {
   .head .logo {
